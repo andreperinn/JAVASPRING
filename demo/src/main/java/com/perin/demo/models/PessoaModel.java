@@ -3,17 +3,14 @@ package com.perin.demo.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "TBL_PROF")
+@Table (name= "TBL_PESSOA")
 
-public class ProfessorModel {
+public class PessoaModel {
 
-    @Id
+   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
-    private String nome;
-    private String especialidade;
-
+   private String nome;
 
     public Long getId() {
         return id;
@@ -30,20 +27,4 @@ public class ProfessorModel {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public String getEspecialidade() {
-        return especialidade;
-    }
-
-    public void setEspecialidade(String especialidade) {
-        this.especialidade = especialidade;
-    }
-
-    public ProfessorModel() {
-
-    }
-
-
 }
-
-
